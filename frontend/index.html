@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>睡眠グラフ解析レポート</title>
+<style>
+body { font-family: sans-serif; background: #f4f6fa; padding: 20px; }
+#report { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+</style>
+</head>
+<body>
+  <h1>🛌 睡眠グラフ解析レポート</h1>
+  <div id="report">解析中または結果がありません。</div>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const report = params.get("report");
+    if (report) document.getElementById("report").innerText = decodeURIComponent(report);
+  </script>
+</body>
+</html>
